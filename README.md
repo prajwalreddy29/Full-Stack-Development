@@ -151,5 +151,4 @@ npm run client - to run client standalone.
 
 ### Developed By
 
- - [Abhishek Ranjan](https://www.github.com/arabhiar)
- - [Narendra Manglani](https://github.com/ishuu7)
+ - [KURAPATI PRAJWAL SAI REDDY](https://www.github.com/arabhiar)
