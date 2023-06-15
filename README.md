@@ -1,70 +1,155 @@
-# Getting Started with Create React App
+# CRED-T8
+Team ID: CRED-T8 | Team Members: Narendra Manglani &amp; Abhishek Ranjan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Objective](#objective)
+- [Introduction](#introduction)
+- [Demo](#demo)
+- [Features](#features)
+- [Built With(Tech Stack)](#built-with)
+- [How to Get Started](#how-to-get-started)
+- [Deployed Links](#deployed-links)
+- [Developed By](#developed-by)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Objective
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Build a Credit Card Management system (web application) which can handle the entire lifecycle of a customer’s credit card. Functionality like adding and verifying credit card(s), fetching the credit card statement to generate a summary and extract insights and making payments for the card. The system should have a UI which gives the customers a clean interface to use.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Introduction
 
-### `npm run build`
+As an externship program we had provided a project to make a Credit Card Management System similar to CRED. We successfully build the web application as well as android application. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Below is a demo of final project.
 
-### `npm run eject`
+- [Demo Link](https://www.youtube.com/watch?v=3rGtfzDxl0A)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- GIF  <br/> <br/> ![](./assets/demo.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- User can login and register using email and password.
+- User can add their credit card.
+- User can update their details in Profile section.
+- Same card can be added by two or more users(need authorization to do so).
+- User can pay bill to decrease the outstanding amount.
+- User can take a look at all the statements for a specific month of a year.
+- User will get a graphical analysis of the spendings for every month.
+- User will get reminders on email and phone for last 5 days of every month(he/she has an option to disable reminders).
+- User will get reward points for timely paying credit card dues.
+- User can use the reward points to buy coupons for companies like Amazon, Flipkart, Myntra, etc.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Redux](https://redux.js.org/) - A Predictable State Container for Javascript Apps
+- [React-Bootstrap](https://react-bootstrap.github.io/) - Wrapper for bootstrap in ReactJS
+- [NodeJS](https://nodejs.org/) - It is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [ExpressJS](https://expressjs.com/) - It is designed for building web applications and APIs.
+- [MySQL](https://www.mysql.com/) - A relational database management system to store data.
+- [Sequelize](https://sequelize.org/) - It is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### How To Get Started
 
-### Making a Progressive Web App
+1. Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. ``` cd backend ``` and create a folder named ```config```. Inside that folder make a file named ``` config.json ```
 
-### Advanced Configuration
+3. Content of ``` config.json ``` should be similar to this.
+> Note: We are using mysql as a dialect(for storing data). You can use any dialect like Postgress, MariaDB, SQLite and Microsoft SQL Server. But you have to change ```config.json``` accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```json
+{
+    "development": {
+      "username": "<db_user>",
+      "password": "<password>",
+      "database": "cred_dev",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "<db_user>",
+      "password": "<password>",
+      "database": "cred_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "<db_user>",
+      "password": "<password>",
+      "database": "cred_prod",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
+  }
+```
+4. In ``` backend ``` directory create a file named ``` .env ```
 
-### Deployment
+5. Content of ``` .env ``` should be similar to this
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+PORT=5000
+SECRET=<YOUR_SECRET_KEY>
+ENCRYPTION_KEY=<YOUR_ENCRYPTION_KEY>
+TWILIO_ACCOUNT_SID=<TWILIO_ACCOUNT_SID>
+TWILIO_AUTH_TOKEN=<TWILIO_AUTH_TOKEN>
+TWILIO_PHONE_NO=<TWILIO_PHONE_NO>
+EMAIL=<AN_EMAIl_ID>
+EMAIL_PAS=<EMAIL_PASSWORD>
+```
 
-### `npm run build` fails to minify
+6. In ```backend``` directory run ``` npm install ```.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. ``` cd frontend ``` and create a file named ``` .env ```.
+
+8. Content of ``` .env ``` should be similar to this.
+```
+REACT_APP_BACKEND_URL_DEV=http://localhost:5000/
+REACT_APP_BACKEND_URL_PROD=<BACKEND_DEPLOYED_URL>
+```
+
+9. In ``` frontend ``` directory run ``` npm install ```
+
+10. ``` cd backend ``` and exectute following command
+```
+npm run dev - to run server and client concurrently
+npm run server - to run server standalone
+npm run client - to run client standalone.
+```
+
+---
+
+### Deployed Links
+
+- Web Application
+    - [Link](https://cred-t8.netlify.app/)
+- Android APK
+    - [Link](https://drive.google.com/file/d/1oxP7BQGEgGeFnLBS8aiM3V_DLA0UQnCK/view?usp=sharing)
+- Demo Account
+    - email: ```cadel21249@vreagles.com```
+    - password: ```Temp@123```
+
+---
+
+### Developed By
+
+ - [Abhishek Ranjan](https://www.github.com/arabhiar)
+ - [Narendra Manglani](https://github.com/ishuu7)
