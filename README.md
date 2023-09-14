@@ -1,6 +1,4 @@
-# CRED-T8
-Team ID: CRED-T8 | Team Members: Narendra Manglani &amp; Abhishek Ranjan
-
+# CRED
 ---
 
 ## Table of Contents
@@ -134,19 +132,6 @@ npm run dev - to run server and client concurrently
 npm run server - to run server standalone
 npm run client - to run client standalone.
 ```
-
----
-
-### Deployed Links
-
-- Web Application
-    - [Link](https://cred-t8.netlify.app/)
-- Android APK
-    - [Link](https://drive.google.com/file/d/1oxP7BQGEgGeFnLBS8aiM3V_DLA0UQnCK/view?usp=sharing)
-- Demo Account
-    - email: ```cadel21249@vreagles.com```
-    - password: ```Temp@123```
-
 ---
 
 ### Developed By
